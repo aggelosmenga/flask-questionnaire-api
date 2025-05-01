@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from pymongo import MongoClient
-
+import re
 # Flask App Initialization
 app = Flask(__name__)
 app.secret_key = 'a_random_key'
@@ -93,14 +93,30 @@ def addstudent():
     return render_template('addstudent.html')
 @app.route('/admin/deletestudent',methods=['GET','POST'])
 def deletestudent():
+    check=False
+    student=None
+    success = request.args.get('success')
     if request.method=='POST':
-        reg_number=request.form['reg_number']
-        jsoned={'reg_number': reg_number}
-        student=students_collection.find_one(jsoned)
-        check = True
-        print(check)
-       # students_collection.delete_one(jsoned)
-    return render_template('deletestudent.html',checl)
+        reg_number = request.form['reg_number']
+        try:
+            reg_number=int(reg_number)
+            jsoned={'reg_number':reg_number}
+        except ValueError:
+            return render_template("temp.html", message="Registry number must be a number!"), 400
+
+        if 'findstudent' in request.form: 
+            student = students_collection.find_one(jsoned)
+            check = True
+            print(f"Student found: {student}") 
+            return render_template('deletestudent.html', check=check, student=student)
+
+        elif 'delete' in request.form:
+            students_collection.delete_one(jsoned)
+            return redirect(url_for('deletestudent', success=True))
+    return render_template('deletestudent.html', check=check, student=student, success=success)
+
+
+
 # Run the Flask App
 if __name__ == '__main__':
     app.run(debug=True, host="localhost", port=5000)

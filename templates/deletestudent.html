@@ -55,12 +55,26 @@
         <form method="POST">
             <label for="reg_number">Registry Number</label>
             <input type="text" id="reg_number" name="reg_number" required>
-            <button type="submit" onclick="showstudent()">find student</button>
+            <button type="submit" name="findstudent">find student</button>
         </form>
+        
         {% if check %}
-            <p>test</p>
+            {% if student %}
+                <h3>Student Found:</h3>
+                <p><strong>Registration Number:</strong> {{ student.reg_number }}</p>
+                <p><strong>Name:</strong> {{ student.name }}</p>
+                <p><strong>Surname:</strong> {{ student.surname }}</p>
+                <form method="POST">
+                    <input type="hidden" name="reg_number" value="{{ student.reg_number }}">
+                    <button type="submit" name="delete" 
+                            style="background-color: #ff4444; color: white;">
+                        Confirm Delete
+                    </button>
+                </form>
+            {% else %}
+                <p style="color: red;">No student found with this registration number.</p>
+            {% endif %}
         {% endif %}
-
     </div>
 
     {% if error %}
