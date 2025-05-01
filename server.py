@@ -82,6 +82,7 @@ def addstudent():
         surname=request.form['surname']
         reg_number=request.form['reg_number']
         dept=request.form['dept']
+        reg_number=int(reg_number)
         if name and surname and username and password and reg_number and dept:
             student = {'username':username,'password':password ,'name': name, 'surname': surname,"reg_number":reg_number,"department":dept}
             students_collection.insert_one(student)
@@ -98,16 +99,15 @@ def deletestudent():
     success = request.args.get('success')
     if request.method=='POST':
         reg_number = request.form['reg_number']
-        try:
-            reg_number=int(reg_number)
+        print(type(reg_number))
+        if re.search(r'[a-zA-Z]', reg_number):
             jsoned={'reg_number':reg_number}
-        except ValueError:
-            return render_template("temp.html", message="Registry number must be a number!"), 400
+        else:
+            jsoned={'reg_number':int(reg_number)}
 
         if 'findstudent' in request.form: 
             student = students_collection.find_one(jsoned)
             check = True
-            print(f"Student found: {student}") 
             return render_template('deletestudent.html', check=check, student=student)
 
         elif 'delete' in request.form:
