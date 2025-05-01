@@ -1,0 +1,158 @@
+[
+    {
+        "questionnaire_id" : 1,
+        "from_student" : false,
+        "answers" : [
+            {
+                "question_num" : 1,
+                "content" : 35.0
+            },
+            {
+                "question_num" : 2,
+                "content" : 5.0
+            }
+        ]
+    },
+    {
+        "questionnaire_id" : 1,
+        "from_student" : true,
+        "answers" : [
+            {
+                "question_num" : 1,
+                "content" : 45.0
+            },
+            {
+                "question_num" : 2,
+                "content" : 4.0
+            }
+        ]
+    },
+    {
+        "questionnaire_id" : 2,
+        "from_student" : true,
+        "answers" : [
+            {
+                "question_num" : 1,
+                "content" : 37.0
+            },
+            {
+                "question_num" : 2,
+                "content" : 1.0
+            },
+            {
+                "question_num" : 3,
+                "content" : 2.0
+            },
+            {
+                "question_num" : 4,
+                "content" : "One apple a day makes the doctor go away!"
+            }
+        ]
+    },
+    {
+        "questionnaire_id" : 2,
+        "from_student" : false,
+        "answers" : [
+            {
+                "question_num" : 1,
+                "content" : 0.0
+            },
+            {
+                "question_num" : 2,
+                "content" : 2.0
+            },
+            {
+                "question_num" : 3,
+                "content" : 2.0
+            },
+            {
+                "question_num" : 4,
+                "content" : "I like dietary products!"
+            }
+        ]
+    },
+    {
+        "questionnaire_id" : 2,
+        "from_student" : false,
+        "answers" : [
+            {
+                "question_num" : 1,
+                "content" : 0.0
+            },
+            {
+                "question_num" : 2,
+                "content" : 0.0
+            },
+            {
+                "question_num" : 3,
+                "content" : 0.0
+            },
+            {
+                "question_num" : 4,
+                "content" : "I do not like dietary products!"
+            }
+        ]
+    },
+    {
+        "questionnaire_id" : 3,
+        "from_student" : false,
+        "answers" : [
+            {
+                "question_num" : 1,
+                "content" : "Part-Time Jobs give me time to do other activities as well!"
+            }
+        ]
+    },
+    {
+        "questionnaire_id" : 8,
+        "from_student" : true,
+        "answers" : [
+            {
+                "question_num" : 1,
+                "content" : 4.0
+            }
+        ]
+    },
+    {
+        "questionnaire_id" : 9,
+        "from_student" : true,
+        "answers" : [
+            {
+                "question_num" : 1,
+                "content" : "Surveying stress levels and mental health practices is very important!"
+            },
+            {
+                "question_num" : 2,
+                "content" : 5.0
+            }
+        ]
+    },
+    {
+        "questionnaire_id" : 9,
+        "from_student" : false,
+        "answers" : [
+            {
+                "question_num" : 1,
+                "content" : "I am not sure about the question..."
+            },
+            {
+                "question_num" : 2,
+                "content" : 0.0
+            }
+        ]
+    },
+    {
+        "questionnaire_id" : 9,
+        "from_student" : true,
+        "answers" : [
+            {
+                "question_num" : 1,
+                "content" : "I am working to maintain a low level of stress."
+            },
+            {
+                "question_num" : 2,
+                "content" : 3.0
+            }
+        ]
+    }
+]

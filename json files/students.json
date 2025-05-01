@@ -1,0 +1,802 @@
+[
+    {
+      "password": "pass1",
+      "reg_number": 1,
+      "department": "Digital Systems",
+      "name": "John",
+      "surname": "Doe",
+      "username": "user1"
+    },
+    {
+      "password": "pass2",
+      "reg_number": 2,
+      "department": "Economics",
+      "name": "Alice",
+      "surname": "Smith",
+      "username": "user2"
+    },
+    {
+      "password": "pass3",
+      "reg_number": 3,
+      "department": "Business Administration",
+      "name": "Bob",
+      "surname": "Johnson",
+      "username": "user3"
+    },
+    {
+      "password": "pass4",
+      "reg_number": 4,
+      "department": "International and European Studies",
+      "name": "Eve",
+      "surname": "Williams",
+      "username": "user4"
+    },
+    {
+      "password": "pass5",
+      "reg_number": 5,
+      "department": "Tourism Studies",
+      "name": "Charlie",
+      "surname": "Brown",
+      "username": "user5"
+    },
+    {
+      "password": "pass6",
+      "reg_number": 6,
+      "department": "Maritime Studies",
+      "name": "Sophia",
+      "surname": "Jones",
+      "username": "user6"
+    },
+    {
+      "password": "pass7",
+      "reg_number": 7,
+      "department": "Industrial Management and Technology",
+      "name": "Liam",
+      "surname": "Davis",
+      "username": "user7"
+    },
+    {
+      "password": "pass8",
+      "reg_number": 8,
+      "department": "Finance and Banking Management",
+      "name": "Olivia",
+      "surname": "Miller",
+      "username": "user8"
+    },
+    {
+      "password": "pass9",
+      "reg_number": 9,
+      "department": "Statistics and Actuarial Science",
+      "name": "Noah",
+      "surname": "Wilson",
+      "username": "user9"
+    },
+    {
+      "password": "pass10",
+      "reg_number": 10,
+      "department": "Computer Science",
+      "name": "Emma",
+      "surname": "Moore",
+      "username": "user10"
+    },
+    {
+      "password": "pass11",
+      "reg_number": 11,
+      "department": "Digital Systems",
+      "name": "Jackson",
+      "surname": "Taylor",
+      "username": "user11"
+    },
+    {
+      "password": "pass12",
+      "reg_number": 12,
+      "department": "Economics",
+      "name": "Ava",
+      "surname": "Anderson",
+      "username": "user12"
+    },
+    {
+      "password": "pass13",
+      "reg_number": 13,
+      "department": "Business Administration",
+      "name": "Aiden",
+      "surname": "Thomas",
+      "username": "user13"
+    },
+    {
+      "password": "pass14",
+      "reg_number": 14,
+      "department": "International and European Studies",
+      "name": "Isabella",
+      "surname": "Jackson",
+      "username": "user14"
+    },
+    {
+      "password": "pass15",
+      "reg_number": 15,
+      "department": "Tourism Studies",
+      "name": "Lucas",
+      "surname": "White",
+      "username": "user15"
+    },
+    {
+      "password": "pass16",
+      "reg_number": 16,
+      "department": "Maritime Studies",
+      "name": "Mia",
+      "surname": "Harris",
+      "username": "user16"
+    },
+    {
+      "password": "pass17",
+      "reg_number": 17,
+      "department": "Industrial Management and Technology",
+      "name": "Ethan",
+      "surname": "Martin",
+      "username": "user17"
+    },
+    {
+      "password": "pass18",
+      "reg_number": 18,
+      "department": "Finance and Banking Management",
+      "name": "Harper",
+      "surname": "Thompson",
+      "username": "user18"
+    },
+    {
+      "password": "pass19",
+      "reg_number": 19,
+      "department": "Statistics and Actuarial Science",
+      "name": "Caleb",
+      "surname": "Garcia",
+      "username": "user19"
+    },
+    {
+      "password": "pass20",
+      "reg_number": 20,
+      "department": "Computer Science",
+      "name": "Ella",
+      "surname": "Martinez",
+      "username": "user20"
+    },
+    {
+      "password": "pass21",
+      "reg_number": 21,
+      "department": "Digital Systems",
+      "name": "Ryan",
+      "surname": "Robinson",
+      "username": "user21"
+    },
+    {
+      "password": "pass22",
+      "reg_number": 22,
+      "department": "Economics",
+      "name": "Chloe",
+      "surname": "Clark",
+      "username": "user22"
+    },
+    {
+      "password": "pass23",
+      "reg_number": 23,
+      "department": "Business Administration",
+      "name": "Nathan",
+      "surname": "Rodriguez",
+      "username": "user23"
+    },
+    {
+      "password": "pass24",
+      "reg_number": 24,
+      "department": "International and European Studies",
+      "name": "Victoria",
+      "surname": "Lewis",
+      "username": "user24"
+    },
+    {
+      "password": "pass25",
+      "reg_number": 25,
+      "department": "Tourism Studies",
+      "name": "Gabriel",
+      "surname": "Lee",
+      "username": "user25"
+    },
+    {
+      "password": "pass26",
+      "reg_number": 26,
+      "department": "Maritime Studies",
+      "name": "Grace",
+      "surname": "Walker",
+      "username": "user26"
+    },
+    {
+      "password": "pass27",
+      "reg_number": 27,
+      "department": "Industrial Management and Technology",
+      "name": "Owen",
+      "surname": "Hall",
+      "username": "user27"
+    },
+    {
+      "password": "pass28",
+      "reg_number": 28,
+      "department": "Finance and Banking Management",
+      "name": "Lily",
+      "surname": "Allen",
+      "username": "user28"
+    },
+    {
+      "password": "pass29",
+      "reg_number": 29,
+      "department": "Statistics and Actuarial Science",
+      "name": "Isaac",
+      "surname": "Young",
+      "username": "user29"
+    },
+    {
+      "password": "pass30",
+      "reg_number": 30,
+      "department": "Computer Science",
+      "name": "Scarlett",
+      "surname": "Hernandez",
+      "username": "user30"
+    },
+    {
+      "password": "pass31",
+      "reg_number": 31,
+      "department": "Digital Systems",
+      "name": "Henry",
+      "surname": "King",
+      "username": "user31"
+    },
+    {
+      "password": "pass32",
+      "reg_number": 32,
+      "department": "Economics",
+      "name": "Stella",
+      "surname": "Wright",
+      "username": "user32"
+    },
+    {
+      "password": "pass33",
+      "reg_number": 33,
+      "department": "Business Administration",
+      "name": "Wyatt",
+      "surname": "Lopez",
+      "username": "user33"
+    },
+    {
+      "password": "pass34",
+      "reg_number": 34,
+      "department": "International and European Studies",
+      "name": "Hazel",
+      "surname": "Hill",
+      "username": "user34"
+    },
+    {
+      "password": "pass35",
+      "reg_number": 35,
+      "department": "Tourism Studies",
+      "name": "Jayden",
+      "surname": "Roberts",
+      "username": "user35"
+    },
+    {
+      "password": "pass36",
+      "reg_number": 36,
+      "department": "Maritime Studies",
+      "name": "Aurora",
+      "surname": "Green",
+      "username": "user36"
+    },
+    {
+      "password": "pass37",
+      "reg_number": 37,
+      "department": "Industrial Management and Technology",
+      "name": "Carter",
+      "surname": "Adams",
+      "username": "user37"
+    },
+    {
+      "password": "pass38",
+      "reg_number": 38,
+      "department": "Finance and Banking Management",
+      "name": "Natalie",
+      "surname": "Baker",
+      "username": "user38"
+    },
+    {
+      "password": "pass39",
+      "reg_number": 39,
+      "department": "Statistics and Actuarial Science",
+      "name": "Julian",
+      "surname": "Gonzalez",
+      "username": "user39"
+    },
+    {
+      "password": "pass40",
+      "reg_number": 40,
+      "department": "Computer Science",
+      "name": "Brooklyn",
+      "surname": "Nelson",
+      "username": "user40"
+    },
+    {
+      "password": "pass41",
+      "reg_number": 41,
+      "department": "Digital Systems",
+      "name": "Lincoln",
+      "surname": "Carter",
+      "username": "user41"
+    },
+    {
+      "password": "pass42",
+      "reg_number": 42,
+      "department": "Economics",
+      "name": "Leah",
+      "surname": "Mitchell",
+      "username": "user42"
+    },
+    {
+      "password": "pass43",
+      "reg_number": 43,
+      "department": "Business Administration",
+      "name": "Owen",
+      "surname": "Perez",
+      "username": "user43"
+    },
+    {
+      "password": "pass44",
+      "reg_number": 44,
+      "department": "International and European Studies",
+      "name": "Savannah",
+      "surname": "Roberts",
+      "username": "user44"
+    },
+    {
+      "password": "pass45",
+      "reg_number": 45,
+      "department": "Tourism Studies",
+      "name": "Leo",
+      "surname": "Turner",
+      "username": "user45"
+    },
+    {
+      "password": "pass46",
+      "reg_number": 46,
+      "department": "Maritime Studies",
+      "name": "Audrey",
+      "surname": "Phillips",
+      "username": "user46"
+    },
+    {
+      "password": "pass47",
+      "reg_number": 47,
+      "department": "Industrial Management and Technology",
+      "name": "Samuel",
+      "surname": "Campbell",
+      "username": "user47"
+    },
+    {
+      "password": "pass48",
+      "reg_number": 48,
+      "department": "Finance and Banking Management",
+      "name": "Skylar",
+      "surname": "Parker",
+      "username": "user48"
+    },
+    {
+      "password": "pass49",
+      "reg_number": 49,
+      "department": "Statistics and Actuarial Science",
+      "name": "Mateo",
+      "surname": "Evans",
+      "username": "user49"
+    },
+    {
+      "password": "pass50",
+      "reg_number": 50,
+      "department": "Computer Science",
+      "name": "Willow",
+      "surname": "Edwards",
+      "username": "user50"
+    },
+    {
+      "password": "pass51",
+      "reg_number": 51,
+      "department": "Digital Systems",
+      "name": "Joseph",
+      "surname": "Collins",
+      "username": "user51"
+    },
+    {
+      "password": "pass52",
+      "reg_number": 52,
+      "department": "Economics",
+      "name": "Ellie",
+      "surname": "Stewart",
+      "username": "user52"
+    },
+    {
+      "password": "pass53",
+      "reg_number": 53,
+      "department": "Business Administration",
+      "name": "Christopher",
+      "surname": "Sanchez",
+      "username": "user53"
+    },
+    {
+      "password": "pass54",
+      "reg_number": 54,
+      "department": "International and European Studies",
+      "name": "Claire",
+      "surname": "Morris",
+      "username": "user54"
+    },
+    {
+      "password": "pass55",
+      "reg_number": 55,
+      "department": "Tourism Studies",
+      "name": "Daniel",
+      "surname": "Rogers",
+      "username": "user55"
+    },
+    {
+      "password": "pass56",
+      "reg_number": 56,
+      "department": "Maritime Studies",
+      "name": "Paisley",
+      "surname": "Reed",
+      "username": "user56"
+    },
+    {
+      "password": "pass57",
+      "reg_number": 57,
+      "department": "Industrial Management and Technology",
+      "name": "Matthew",
+      "surname": "Cook",
+      "username": "user57"
+    },
+    {
+      "password": "pass58",
+      "reg_number": 58,
+      "department": "Finance and Banking Management",
+      "name": "Anna",
+      "surname": "Morgan",
+      "username": "user58"
+    },
+    {
+      "password": "pass59",
+      "reg_number": 59,
+      "department": "Statistics and Actuarial Science",
+      "name": "David",
+      "surname": "Bell",
+      "username": "user59"
+    },
+    {
+      "password": "pass60",
+      "reg_number": 60,
+      "department": "Computer Science",
+      "name": "Samantha",
+      "surname": "Murphy",
+      "username": "user60"
+    },
+    {
+      "password": "pass61",
+      "reg_number": 61,
+      "department": "Digital Systems",
+      "name": "Andrew",
+      "surname": "Bailey",
+      "username": "user61"
+    },
+    {
+      "password": "pass62",
+      "reg_number": 62,
+      "department": "Economics",
+      "name": "Caroline",
+      "surname": "Rivera",
+      "username": "user62"
+    },
+    {
+      "password": "pass63",
+      "reg_number": 63,
+      "department": "Business Administration",
+      "name": "William",
+      "surname": "Cooper",
+      "username": "user63"
+    },
+    {
+      "password": "pass64",
+      "reg_number": 64,
+      "department": "International and European Studies",
+      "name": "Maya",
+      "surname": "Richardson",
+      "username": "user64"
+    },
+    {
+      "password": "pass65",
+      "reg_number": 65,
+      "department": "Tourism Studies",
+      "name": "James",
+      "surname": "Cox",
+      "username": "user65"
+    },
+    {
+      "password": "pass66",
+      "reg_number": 66,
+      "department": "Maritime Studies",
+      "name": "Ruby",
+      "surname": "Howard",
+      "username": "user66"
+    },
+    {
+      "password": "pass67",
+      "reg_number": 67,
+      "department": "Industrial Management and Technology",
+      "name": "Benjamin",
+      "surname": "Ward",
+      "username": "user67"
+    },
+    {
+      "password": "pass68",
+      "reg_number": 68,
+      "department": "Finance and Banking Management",
+      "name": "Eleanor",
+      "surname": "Peterson",
+      "username": "user68"
+    },
+    {
+      "password": "pass69",
+      "reg_number": 69,
+      "department": "Statistics and Actuarial Science",
+      "name": "Michael",
+      "surname": "Gray",
+      "username": "user69"
+    },
+    {
+      "password": "pass70",
+      "reg_number": 70,
+      "department": "Computer Science",
+      "name": "Victoria",
+      "surname": "Ramirez",
+      "username": "user70"
+    },
+    {
+      "password": "pass71",
+      "reg_number": 71,
+      "department": "Digital Systems",
+      "name": "Alexander",
+      "surname": "James",
+      "username": "user71"
+    },
+    {
+      "password": "pass72",
+      "reg_number": 72,
+      "department": "Economics",
+      "name": "Sophie",
+      "surname": "Sanders",
+      "username": "user72"
+    },
+    {
+      "password": "pass73",
+      "reg_number": 73,
+      "department": "Business Administration",
+      "name": "Daniel",
+      "surname": "Price",
+      "username": "user73"
+    },
+    {
+      "password": "pass74",
+      "reg_number": 74,
+      "department": "International and European Studies",
+      "name": "Penelope",
+      "surname": "Bennett",
+      "username": "user74"
+    },
+    {
+      "password": "pass75",
+      "reg_number": 75,
+      "department": "Tourism Studies",
+      "name": "Henry",
+      "surname": "Wood",
+      "username": "user75"
+    },
+    {
+      "password": "pass76",
+      "reg_number": 76,
+      "department": "Maritime Studies",
+      "name": "Layla",
+      "surname": "Barnes",
+      "username": "user76"
+    },
+    {
+      "password": "pass77",
+      "reg_number": 77,
+      "department": "Industrial Management and Technology",
+      "name": "Samuel",
+      "surname": "Ross",
+      "username": "user77"
+    },
+    {
+      "password": "pass78",
+      "reg_number": 78,
+      "department": "Finance and Banking Management",
+      "name": "Riley",
+      "surname": "Jenkins",
+      "username": "user78"
+    },
+    {
+      "password": "pass79",
+      "reg_number": 79,
+      "department": "Statistics and Actuarial Science",
+      "name": "Ryan",
+      "surname": "Perry",
+      "username": "user79"
+    },
+    {
+      "password": "pass80",
+      "reg_number": 80,
+      "department": "Computer Science",
+      "name": "Scarlett",
+      "surname": "Powell",
+      "username": "user80"
+    },
+    {
+      "password": "pass81",
+      "reg_number": 81,
+      "department": "Digital Systems",
+      "name": "Nicholas",
+      "surname": "Long",
+      "username": "user81"
+    },
+    {
+      "password": "pass82",
+      "reg_number": 82,
+      "department": "Economics",
+      "name": "Nora",
+      "surname": "Patterson",
+      "username": "user82"
+    },
+    {
+      "password": "pass83",
+      "reg_number": 83,
+      "department": "Business Administration",
+      "name": "Eric",
+      "surname": "Hughes",
+      "username": "user83"
+    },
+    {
+      "password": "pass84",
+      "reg_number": 84,
+      "department": "International and European Studies",
+      "name": "Bella",
+      "surname": "Flores",
+      "username": "user84"
+    },
+    {
+      "password": "pass85",
+      "reg_number": 85,
+      "department": "Tourism Studies",
+      "name": "Connor",
+      "surname": "Washington",
+      "username": "user85"
+    },
+    {
+      "password": "pass86",
+      "reg_number": 86,
+      "department": "Maritime Studies",
+      "name": "Luna",
+      "surname": "Butler",
+      "username": "user86"
+    },
+    {
+      "password": "pass87",
+      "reg_number": 87,
+      "department": "Industrial Management and Technology",
+      "name": "Adam",
+      "surname": "Simmons",
+      "username": "user87"
+    },
+    {
+      "password": "pass88",
+      "reg_number": 88,
+      "department": "Finance and Banking Management",
+      "name": "Grace",
+      "surname": "Foster",
+      "username": "user88"
+    },
+    {
+      "password": "pass89",
+      "reg_number": 89,
+      "department": "Statistics and Actuarial Science",
+      "name": "Kevin",
+      "surname": "Gonzales",
+      "username": "user89"
+    },
+    {
+      "password": "pass90",
+      "reg_number": 90,
+      "department": "Computer Science",
+      "name": "Hazel",
+      "surname": "Bryant",
+      "username": "user90"
+    },
+    {
+      "password": "pass91",
+      "reg_number": 91,
+      "department": "Digital Systems",
+      "name": "Brandon",
+      "surname": "Alexander",
+      "username": "user91"
+    },
+    {
+      "password": "pass92",
+      "reg_number": 92,
+      "department": "Economics",
+      "name": "Eva",
+      "surname": "Russell",
+      "username": "user92"
+    },
+    {
+      "password": "pass93",
+      "reg_number": 93,
+      "department": "Business Administration",
+      "name": "Tyler",
+      "surname": "Griffin",
+      "username": "user93"
+    },
+    {
+      "password": "pass94",
+      "reg_number": 94,
+      "department": "International and European Studies",
+      "name": "Aubrey",
+      "surname": "Hayes",
+      "username": "user94"
+    },
+    {
+      "password": "pass95",
+      "reg_number": 95,
+      "department": "Tourism Studies",
+      "name": "Dylan",
+      "surname": "Perry",
+      "username": "user95"
+    },
+    {
+      "password": "pass96",
+      "reg_number": 96,
+      "department": "Maritime Studies",
+      "name": "Madison",
+      "surname": "Cole",
+      "username": "user96"
+    },
+    {
+      "password": "pass97",
+      "reg_number": 97,
+      "department": "Industrial Management and Technology",
+      "name": "Justin",
+      "surname": "Sullivan",
+      "username": "user97"
+    },
+    {
+      "password": "pass98",
+      "reg_number": 98,
+      "department": "Finance and Banking Management",
+      "name": "Victoria",
+      "surname": "Coleman",
+      "username": "user98"
+    },
+    {
+      "password": "pass99",
+      "reg_number": 99,
+      "department": "Statistics and Actuarial Science",
+      "name": "Jose",
+      "surname": "Sandoval",
+      "username": "user99"
+    },
+    {
+      "password": "pass100",
+      "reg_number": 100,
+      "department": "Computer Science",
+      "name": "Allison",
+      "surname": "Brewer",
+      "username": "user100"
+    }
+  ]

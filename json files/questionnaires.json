@@ -1,0 +1,2952 @@
+[
+    {
+      "student_id": 1,
+      "questionnaire_id": 1,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/1",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        }
+      ],
+      "answer_count": 2
+    },
+    {
+      "student_id": 2,
+      "questionnaire_id": 2,
+      "title": "Diet and Nutrition Survey",
+      "description": "Gathering information on dietary preferences and nutritional awareness.",
+      "unique_url": "localhost:5000/questionnaire/2",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 3
+    },
+    {
+      "student_id": 3,
+      "questionnaire_id": 3,
+      "title": "Part-Time Job Impact",
+      "description": "Understanding how part-time work affects students.",
+      "unique_url": "localhost:5000/questionnaire/3",
+      "questions": [
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 1
+        }
+      ],
+      "answer_count": 1
+    },
+    {
+      "student_id": 3,
+      "questionnaire_id": 4,
+      "title": "Sleep Quality Survey",
+      "description": "Assessing sleep patterns and quality among students.",
+      "unique_url": "localhost:5000/questionnaire/4",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 4,
+      "questionnaire_id": 5,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/5",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 5,
+      "questionnaire_id": 6,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/6",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 6,
+      "questionnaire_id": 7,
+      "title": "Part-Time Job Impact",
+      "description": "Understanding how part-time work affects students.",
+      "unique_url": "localhost:5000/questionnaire/7",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 7,
+      "questionnaire_id": 8,
+      "title": "Online Learning Feedback",
+      "description": "Collecting experiences and challenges in e-learning.",
+      "unique_url": "localhost:5000/questionnaire/8",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        }
+      ],
+      "answer_count": 1
+    },
+    {
+      "student_id": 8,
+      "questionnaire_id": 9,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/9",
+      "questions": [
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        }
+      ],
+      "answer_count": 3
+    },
+    {
+      "student_id": 8,
+      "questionnaire_id": 10,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/10",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 9,
+      "questionnaire_id": 11,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/11",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 9,
+      "questionnaire_id": 12,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/12",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 10,
+      "questionnaire_id": 13,
+      "title": "Diet and Nutrition Survey",
+      "description": "Gathering information on dietary preferences and nutritional awareness.",
+      "unique_url": "localhost:5000/questionnaire/13",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 10,
+      "questionnaire_id": 14,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/14",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 11,
+      "questionnaire_id": 15,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/15",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 12,
+      "questionnaire_id": 16,
+      "title": "Exercise and Fitness",
+      "description": "Exploring physical activity levels and fitness routines.",
+      "unique_url": "localhost:5000/questionnaire/16",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 13,
+      "questionnaire_id": 17,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/17",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 14,
+      "questionnaire_id": 18,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/18",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 15,
+      "questionnaire_id": 19,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/19",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 16,
+      "questionnaire_id": 20,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/20",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 17,
+      "questionnaire_id": 21,
+      "title": "Exercise and Fitness",
+      "description": "Exploring physical activity levels and fitness routines.",
+      "unique_url": "localhost:5000/questionnaire/21",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 18,
+      "questionnaire_id": 22,
+      "title": "Part-Time Job Impact",
+      "description": "Understanding how part-time work affects students.",
+      "unique_url": "localhost:5000/questionnaire/22",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 19,
+      "questionnaire_id": 23,
+      "title": "Part-Time Job Impact",
+      "description": "Understanding how part-time work affects students.",
+      "unique_url": "localhost:5000/questionnaire/23",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 20,
+      "questionnaire_id": 24,
+      "title": "Part-Time Job Impact",
+      "description": "Understanding how part-time work affects students.",
+      "unique_url": "localhost:5000/questionnaire/24",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 21,
+      "questionnaire_id": 25,
+      "title": "Exercise and Fitness",
+      "description": "Exploring physical activity levels and fitness routines.",
+      "unique_url": "localhost:5000/questionnaire/25",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 22,
+      "questionnaire_id": 26,
+      "title": "Online Learning Feedback",
+      "description": "Collecting experiences and challenges in e-learning.",
+      "unique_url": "localhost:5000/questionnaire/26",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 23,
+      "questionnaire_id": 27,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/27",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 23,
+      "questionnaire_id": 28,
+      "title": "Social Media Usage",
+      "description": "Understanding daily social media habits.",
+      "unique_url": "localhost:5000/questionnaire/28",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 24,
+      "questionnaire_id": 29,
+      "title": "Exercise and Fitness",
+      "description": "Exploring physical activity levels and fitness routines.",
+      "unique_url": "localhost:5000/questionnaire/29",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 25,
+      "questionnaire_id": 30,
+      "title": "Online Learning Feedback",
+      "description": "Collecting experiences and challenges in e-learning.",
+      "unique_url": "localhost:5000/questionnaire/30",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 26,
+      "questionnaire_id": 31,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/31",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 27,
+      "questionnaire_id": 32,
+      "title": "Sleep Quality Survey",
+      "description": "Assessing sleep patterns and quality among students.",
+      "unique_url": "localhost:5000/questionnaire/32",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 30,
+      "questionnaire_id": 33,
+      "title": "Sleep Quality Survey",
+      "description": "Assessing sleep patterns and quality among students.",
+      "unique_url": "localhost:5000/questionnaire/33",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 31,
+      "questionnaire_id": 34,
+      "title": "Exercise and Fitness",
+      "description": "Exploring physical activity levels and fitness routines.",
+      "unique_url": "localhost:5000/questionnaire/34",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 32,
+      "questionnaire_id": 35,
+      "title": "Online Learning Feedback",
+      "description": "Collecting experiences and challenges in e-learning.",
+      "unique_url": "localhost:5000/questionnaire/35",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 32,
+      "questionnaire_id": 36,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/36",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 33,
+      "questionnaire_id": 37,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/37",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 33,
+      "questionnaire_id": 38,
+      "title": "Online Learning Feedback",
+      "description": "Collecting experiences and challenges in e-learning.",
+      "unique_url": "localhost:5000/questionnaire/38",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 34,
+      "questionnaire_id": 39,
+      "title": "Social Media Usage",
+      "description": "Understanding daily social media habits.",
+      "unique_url": "localhost:5000/questionnaire/39",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 35,
+      "questionnaire_id": 40,
+      "title": "Part-Time Job Impact",
+      "description": "Understanding how part-time work affects students.",
+      "unique_url": "localhost:5000/questionnaire/40",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 36,
+      "questionnaire_id": 41,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/41",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 37,
+      "questionnaire_id": 42,
+      "title": "Social Media Usage",
+      "description": "Understanding daily social media habits.",
+      "unique_url": "localhost:5000/questionnaire/42",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 38,
+      "questionnaire_id": 43,
+      "title": "Diet and Nutrition Survey",
+      "description": "Gathering information on dietary preferences and nutritional awareness.",
+      "unique_url": "localhost:5000/questionnaire/43",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 39,
+      "questionnaire_id": 44,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/44",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 40,
+      "questionnaire_id": 45,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/45",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 41,
+      "questionnaire_id": 46,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/46",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 41,
+      "questionnaire_id": 47,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/47",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 42,
+      "questionnaire_id": 48,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/48",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 43,
+      "questionnaire_id": 49,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/49",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 44,
+      "questionnaire_id": 50,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/50",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 45,
+      "questionnaire_id": 51,
+      "title": "Sleep Quality Survey",
+      "description": "Assessing sleep patterns and quality among students.",
+      "unique_url": "localhost:5000/questionnaire/51",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 46,
+      "questionnaire_id": 52,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/52",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 47,
+      "questionnaire_id": 53,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/53",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 48,
+      "questionnaire_id": 54,
+      "title": "Online Learning Feedback",
+      "description": "Collecting experiences and challenges in e-learning.",
+      "unique_url": "localhost:5000/questionnaire/54",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 49,
+      "questionnaire_id": 55,
+      "title": "Part-Time Job Impact",
+      "description": "Understanding how part-time work affects students.",
+      "unique_url": "localhost:5000/questionnaire/55",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 50,
+      "questionnaire_id": 56,
+      "title": "Online Learning Feedback",
+      "description": "Collecting experiences and challenges in e-learning.",
+      "unique_url": "localhost:5000/questionnaire/56",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 55,
+      "questionnaire_id": 57,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/57",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 56,
+      "questionnaire_id": 58,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/58",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 56,
+      "questionnaire_id": 59,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/59",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 57,
+      "questionnaire_id": 60,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/60",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 58,
+      "questionnaire_id": 61,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/61",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 59,
+      "questionnaire_id": 62,
+      "title": "Social Media Usage",
+      "description": "Understanding daily social media habits.",
+      "unique_url": "localhost:5000/questionnaire/62",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 60,
+      "questionnaire_id": 63,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/63",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 61,
+      "questionnaire_id": 64,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/64",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 61,
+      "questionnaire_id": 65,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/65",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 63,
+      "questionnaire_id": 66,
+      "title": "Sleep Quality Survey",
+      "description": "Assessing sleep patterns and quality among students.",
+      "unique_url": "localhost:5000/questionnaire/66",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 64,
+      "questionnaire_id": 67,
+      "title": "Exercise and Fitness",
+      "description": "Exploring physical activity levels and fitness routines.",
+      "unique_url": "localhost:5000/questionnaire/67",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 65,
+      "questionnaire_id": 68,
+      "title": "Social Media Usage",
+      "description": "Understanding daily social media habits.",
+      "unique_url": "localhost:5000/questionnaire/68",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 66,
+      "questionnaire_id": 69,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/69",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 67,
+      "questionnaire_id": 70,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/70",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 68,
+      "questionnaire_id": 71,
+      "title": "Sleep Quality Survey",
+      "description": "Assessing sleep patterns and quality among students.",
+      "unique_url": "localhost:5000/questionnaire/71",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 69,
+      "questionnaire_id": 72,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/72",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 70,
+      "questionnaire_id": 73,
+      "title": "Mental Health Awareness",
+      "description": "Surveying stress levels and mental health practices.",
+      "unique_url": "localhost:5000/questionnaire/73",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 71,
+      "questionnaire_id": 74,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/74",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 72,
+      "questionnaire_id": 75,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/75",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 73,
+      "questionnaire_id": 76,
+      "title": "Sleep Quality Survey",
+      "description": "Assessing sleep patterns and quality among students.",
+      "unique_url": "localhost:5000/questionnaire/76",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 74,
+      "questionnaire_id": 77,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/77",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 75,
+      "questionnaire_id": 78,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/78",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 76,
+      "questionnaire_id": 79,
+      "title": "Part-Time Job Impact",
+      "description": "Understanding how part-time work affects students.",
+      "unique_url": "localhost:5000/questionnaire/79",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 77,
+      "questionnaire_id": 80,
+      "title": "Diet and Nutrition Survey",
+      "description": "Gathering information on dietary preferences and nutritional awareness.",
+      "unique_url": "localhost:5000/questionnaire/80",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 78,
+      "questionnaire_id": 81,
+      "title": "Diet and Nutrition Survey",
+      "description": "Gathering information on dietary preferences and nutritional awareness.",
+      "unique_url": "localhost:5000/questionnaire/81",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 79,
+      "questionnaire_id": 82,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/82",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 80,
+      "questionnaire_id": 83,
+      "title": "Social Media Usage",
+      "description": "Understanding daily social media habits.",
+      "unique_url": "localhost:5000/questionnaire/83",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 81,
+      "questionnaire_id": 84,
+      "title": "Sleep Quality Survey",
+      "description": "Assessing sleep patterns and quality among students.",
+      "unique_url": "localhost:5000/questionnaire/84",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 82,
+      "questionnaire_id": 85,
+      "title": "Sleep Quality Survey",
+      "description": "Assessing sleep patterns and quality among students.",
+      "unique_url": "localhost:5000/questionnaire/85",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 83,
+      "questionnaire_id": 86,
+      "title": "Study Habits Questionnaire",
+      "description": "Evaluating study routines and time management.",
+      "unique_url": "localhost:5000/questionnaire/86",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 84,
+      "questionnaire_id": 87,
+      "title": "Online Learning Feedback",
+      "description": "Collecting experiences and challenges in e-learning.",
+      "unique_url": "localhost:5000/questionnaire/87",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 85,
+      "questionnaire_id": 88,
+      "title": "Social Media Usage",
+      "description": "Understanding daily social media habits.",
+      "unique_url": "localhost:5000/questionnaire/88",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 85,
+      "questionnaire_id": 89,
+      "title": "Social Media Usage",
+      "description": "Understanding daily social media habits.",
+      "unique_url": "localhost:5000/questionnaire/89",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 86,
+      "questionnaire_id": 90,
+      "title": "Diet and Nutrition Survey",
+      "description": "Gathering information on dietary preferences and nutritional awareness.",
+      "unique_url": "localhost:5000/questionnaire/90",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Describe your overall thoughts or experiences regarding this topic.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 87,
+      "questionnaire_id": 91,
+      "title": "Online Learning Feedback",
+      "description": "Collecting experiences and challenges in e-learning.",
+      "unique_url": "localhost:5000/questionnaire/91",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 88,
+      "questionnaire_id": 92,
+      "title": "Part-Time Job Impact",
+      "description": "Understanding how part-time work affects students.",
+      "unique_url": "localhost:5000/questionnaire/92",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 89,
+      "questionnaire_id": 93,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/93",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 90,
+      "questionnaire_id": 94,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/94",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 91,
+      "questionnaire_id": 95,
+      "title": "Sleep Quality Survey",
+      "description": "Assessing sleep patterns and quality among students.",
+      "unique_url": "localhost:5000/questionnaire/95",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 92,
+      "questionnaire_id": 96,
+      "title": "Environmental Awareness",
+      "description": "Exploring students' environmental concerns and actions.",
+      "unique_url": "localhost:5000/questionnaire/96",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 93,
+      "questionnaire_id": 97,
+      "title": "Online Learning Feedback",
+      "description": "Collecting experiences and challenges in e-learning.",
+      "unique_url": "localhost:5000/questionnaire/97",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 94,
+      "questionnaire_id": 98,
+      "title": "Exercise and Fitness",
+      "description": "Exploring physical activity levels and fitness routines.",
+      "unique_url": "localhost:5000/questionnaire/98",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 95,
+      "questionnaire_id": 99,
+      "title": "Part-Time Job Impact",
+      "description": "Understanding how part-time work affects students.",
+      "unique_url": "localhost:5000/questionnaire/99",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How important is this in your life? (0 - Not at all, 5 - Extremely)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "Share any suggestions or personal stories related to this subject.",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    },
+    {
+      "student_id": 96,
+      "questionnaire_id": 100,
+      "title": "Daily Commute Preferences",
+      "description": "Analyzing transportation methods and satisfaction.",
+      "unique_url": "localhost:5000/questionnaire/100",
+      "questions": [
+        {
+          "type": "Numeric",
+          "description": "How often do you engage in this activity? (0 - Never, 5 - Daily)",
+          "question_num": 1
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 2
+        },
+        {
+          "type": "Numeric",
+          "description": "On average, how much time do you spend on this per day (in minutes)?",
+          "question_num": 3
+        },
+        {
+          "type": "Open Ended",
+          "description": "What motivates or discourages you in this area?",
+          "question_num": 4
+        }
+      ],
+      "answer_count": 0
+    }
+  ]
