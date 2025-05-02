@@ -1,0 +1,20 @@
+<html>
+    <ul>
+        {% for items in q %}
+            <li>
+                Student registration number:<strong>{{items.student_id}}</strong>
+                <br>questionnaire id:<strong>{{items.questionnaire_id }}</strong> 
+                <br>title:<strong>{{items.title}}</strong>
+                <br>description:<strong>{{items.description }}</strong>
+                <br>unique url:<strong>{{items.unique_url }}</strong> 
+                <br>times answered:<strong>{{items.answer_count}}</strong>
+                {% for value in items.questions%}
+                <br><strong>question number {{value.question_num}}</strong>
+                <br>type of question:<strong>{{value.type}}</strong>
+                <br>question:<strong>{{value.description}}</strong>
+                
+                {%endfor%}
+            </li>
+        {% endfor %} 
+    </ul>
+</html>

@@ -48,7 +48,6 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('login'))
 
-#not fixed keep for later
 @app.route('/register',methods=['GET','POST'])
 def register():
     if request.method=='POST':
@@ -65,6 +64,8 @@ def register():
         else:
             flash('All fields are required!', 'danger')
     return render_template('register.html')
+
+#admin
 @app.route('/admin',methods=['GET','POST'])
 def admin():
     if 'username' in session:
@@ -115,6 +116,11 @@ def deletestudent():
             return redirect(url_for('deletestudent', success=True))
     return render_template('deletestudent.html', check=check, student=student, success=success)
 
+#for all
+@app.route('/showquestionnaires',methods=['GET'])
+def showquestionnaires():
+    q=questionnaires.find({})
+    return render_template('showquestionnaires.html',q=q)
 
 
 # Run the Flask App
