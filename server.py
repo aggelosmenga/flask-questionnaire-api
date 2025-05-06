@@ -117,11 +117,20 @@ def deletestudent():
     return render_template('deletestudent.html', check=check, student=student, success=success)
 
 #for all
-@app.route('/showquestionnaires',methods=['GET'])
+@app.route('/showquestionnaires',methods=['GET','POST'])
 def showquestionnaires():
     q=questionnaires.find({})
+    if 'sortbyanswer' in request.form and request.method=='POST':
+        sorted=questionnaires.find().sort("answer_count",1)
+        return(render_template('showquestionnaires.html',q=sorted))
     return render_template('showquestionnaires.html',q=q)
-
+ #unique link for every questionnaire
+@app.route('/questionnaire/<num>')
+def questionnairelink(num):
+    print(num)
+    unique=questionnaires.find_one({"questionnaire_id": int(num)}) 
+    print(unique) 
+    return render_template('unique_q.html',unique=unique)
 
 # Run the Flask App
 if __name__ == '__main__':

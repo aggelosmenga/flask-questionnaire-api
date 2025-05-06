@@ -1,0 +1,17 @@
+<html>
+    <h2>questionnaire:</h2>
+    <div>
+    Student registration number:<strong>{{unique.student_id}}</strong>
+                <br>questionnaire id:<strong>{{unique.questionnaire_id }}</strong> 
+                <br>title:<strong>{{unique.title}}</strong>
+                <br>description:<strong>{{unique.description }}</strong>
+                <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=unique.questionnaire_id) }}">{{unique.unique_url}}</a></strong> 
+                <br>times answered:<strong>{{unique.answer_count}}</strong>
+                {% for value in unique.questions%}
+                <br><strong>question number {{value.question_num}}</strong>
+                <br>type of question:<strong>{{value.type}}</strong>
+                <br>question:<strong>{{value.description}}</strong>
+                {%endfor%}
+            </div>
+    <button>Answer questionnaire</button>
+</html>

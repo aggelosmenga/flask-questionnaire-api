@@ -1,4 +1,7 @@
 <html>
+    <form method="POST">
+    <button type="submit" name="sortbyanswer">Sort by times answered</button>
+    </form>
     <ul>
         {% for items in q %}
             <li>
@@ -6,7 +9,7 @@
                 <br>questionnaire id:<strong>{{items.questionnaire_id }}</strong> 
                 <br>title:<strong>{{items.title}}</strong>
                 <br>description:<strong>{{items.description }}</strong>
-                <br>unique url:<strong>{{items.unique_url }}</strong> 
+                <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=items.questionnaire_id) }}">{{items.unique_url}}</a></strong> 
                 <br>times answered:<strong>{{items.answer_count}}</strong>
                 {% for value in items.questions%}
                 <br><strong>question number {{value.question_num}}</strong>
