@@ -96,3 +96,26 @@ v
     <p><a href="{{ url_for('register')}}">not registred yet? Click here to register as a user</a> </p>
 </body>
 </html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+{%for items in questionnaire%}
+                <li>
+                    {{items}}
+                    Student registration number:<strong>{{items.student_id}}</strong>
+                    <br>questionnaire id:<strong>{{items.questionnaire_id }}</strong> 
+                    <br>title:<strong>{{items.title}}</strong>
+                    <br>description:<strong>{{items.description }}</strong>
+                    <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=items.questionnaire_id) }}">{{items.unique_url}}</a></strong> 
+                    <br>times answered:<strong>{{items.answer_count}}</strong>
+                </li>
+                {%endfor%}

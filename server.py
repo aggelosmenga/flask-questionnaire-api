@@ -120,10 +120,35 @@ def deletestudent():
 @app.route('/showquestionnaires',methods=['GET','POST'])
 def showquestionnaires():
     q=questionnaires.find({})
+    check=False
     if 'sortbyanswer' in request.form and request.method=='POST':
         sorted=questionnaires.find().sort("answer_count",1)
         return(render_template('showquestionnaires.html',q=sorted))
+    if 'showall' in request.form and request.method=='POST':
+        q=questionnaires.find({})
+    if 'search' in request.form and request.method=='POST':
+        uservalue=request.form['searchfield'].strip()
+        check=True
+        
+        if students_collection.find_one({'name':uservalue}):
+            search_by_name=list(students_collection.find({'name':uservalue}))
+            studentids=[student['reg_number'] for student in search_by_name]
+            questionnaire=list(questionnaires.find({'student_id':{'$in':studentids}}))
+            return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check)
+        
+        elif questionnaires.find_one({'title':uservalue}):
+            search_by_title=list(questionnaires.find({'title':uservalue}))
+            return render_template('showquestionnaires.html',questionnaire=search_by_title,check=check)
+        
+        elif students_collection.find_one({'department':uservalue}):
+            search_by_dept=list(students_collection.find({'department':uservalue}))
+            studentids=[student['reg_number'] for student in search_by_dept]
+            print(studentids)                  
+            questionnaire=list(questionnaires.find({'student_id': {'$in':studentids}}))
+            return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check)
+        
     return render_template('showquestionnaires.html',q=q)
+ 
  #unique link for every questionnaire
 @app.route('/questionnaire/<num>')
 def questionnairelink(num):
