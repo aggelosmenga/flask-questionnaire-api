@@ -64,7 +64,21 @@ def register():
         else:
             flash('All fields are required!', 'danger')
     return render_template('register.html')
-
+@app.route('/changepassword',methods=['GET','POST'])
+def changepassword():
+    student=None
+    if request.method=='POST':
+        reg_number=request.form['reg_number']
+        oldpass=request.form['oldpass']
+        newpass=request.form['newpass']
+        jsoned={'reg_number':int(reg_number),'password':oldpass}
+        if 'changepass' in request.form:
+            student=students_collection.find_one(jsoned)
+            if student:
+                updated=students_collection.find_one_and_update(jsoned,{'$set':{'password':newpass}})
+                flash('Password updated successfully!', 'info')
+                return redirect(url_for('home'))
+    return render_template('changepassword.html',student=student)
 #admin
 @app.route('/admin',methods=['GET','POST'])
 def admin():
@@ -100,7 +114,6 @@ def deletestudent():
     success = request.args.get('success')
     if request.method=='POST':
         reg_number = request.form['reg_number']
-        print(type(reg_number))
         if re.search(r'[a-zA-Z]', reg_number):
             jsoned={'reg_number':reg_number}
         else:
@@ -121,32 +134,47 @@ def deletestudent():
 def showquestionnaires():
     q=questionnaires.find({})
     check=False
-    if 'sortbyanswer' in request.form and request.method=='POST':
-        sorted=questionnaires.find().sort("answer_count",1)
-        return(render_template('showquestionnaires.html',q=sorted))
-    if 'showall' in request.form and request.method=='POST':
-        q=questionnaires.find({})
-    if 'search' in request.form and request.method=='POST':
-        uservalue=request.form['searchfield'].strip()
-        check=True
-        
-        if students_collection.find_one({'name':uservalue}):
-            search_by_name=list(students_collection.find({'name':uservalue}))
-            studentids=[student['reg_number'] for student in search_by_name]
-            questionnaire=list(questionnaires.find({'student_id':{'$in':studentids}}))
-            return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check)
-        
-        elif questionnaires.find_one({'title':uservalue}):
-            search_by_title=list(questionnaires.find({'title':uservalue}))
-            return render_template('showquestionnaires.html',questionnaire=search_by_title,check=check)
-        
-        elif students_collection.find_one({'department':uservalue}):
-            search_by_dept=list(students_collection.find({'department':uservalue}))
-            studentids=[student['reg_number'] for student in search_by_dept]
-            print(studentids)                  
-            questionnaire=list(questionnaires.find({'student_id': {'$in':studentids}}))
-            return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check)
-        
+    if request.method=='POST':
+        if 'sortbyanswer' in request.form:
+            sorted=questionnaires.find().sort("answer_count",1)
+            return(render_template('showquestionnaires.html',q=sorted))
+        if 'showall' in request.form :
+            q=questionnaires.find({})
+        if 'search' in request.form:
+            uservalue=request.form['searchfield'].strip()
+            check=True
+            
+            if students_collection.find_one({'name':uservalue}):
+                search_by_name=list(students_collection.find({'name':uservalue}))
+                studentids=[student['reg_number'] for student in search_by_name]
+                questionnaire=list(questionnaires.find({'student_id':{'$in':studentids}}))
+                return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check)
+            
+            elif questionnaires.find_one({'title':uservalue}):
+                search_by_title=list(questionnaires.find({'title':uservalue}))
+                return render_template('showquestionnaires.html',questionnaire=search_by_title,check=check)
+            
+            elif students_collection.find_one({'department':uservalue}):
+                search_by_dept=list(students_collection.find({'department':uservalue}))
+                studentids=[student['reg_number'] for student in search_by_dept]
+                print(studentids)                  
+                questionnaire=list(questionnaires.find({'student_id': {'$in':studentids}}))
+                return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check)
+        if 'bound' in request.form:
+            lowerbound=request.form['lowerbound'].strip()
+            upperbound=request.form['upperbound'].strip()
+            if re.search(r'[a-zA-Z]', lowerbound) or re.search(r'[a-zA-Z]',upperbound) or lowerbound=='' or upperbound=='':
+                return render_template('showquestionnaires.html',q=q)
+            else:
+                lowerbound=int(lowerbound)
+                upperbound=int(upperbound)
+                check=True
+                if lowerbound>upperbound:
+                    return render_template('showquestionnaires.html',q=q)
+                rangeofq=list(questionnaires.find({'answer_count':{'$gte':lowerbound,'$lte':upperbound}}))
+                print(rangeofq)
+                return render_template('showquestionnaires.html',rangeofq=rangeofq,check=check)
+            #fix sort
     return render_template('showquestionnaires.html',q=q)
  
  #unique link for every questionnaire

@@ -28,6 +28,28 @@
         {%endif%}
         </div>
     </form>
+    <form method="POST">
+        Search by a range of the number of responses received<Br>
+        from: <input type="text" name="lowerbound"> to: <input type="text" name="upperbound">
+        <button type="submit" name="bound">Search</button>
+        {%if rangeofq is not none%}
+            <ul>
+                {%for items in rangeofq%}
+                <li>
+                    Student registration number:<strong>{{items.student_id}}</strong>
+                    <br>questionnaire id:<strong>{{items.questionnaire_id }}</strong> 
+                    <br>title:<strong>{{items.title}}</strong>
+                    <br>description:<strong>{{items.description }}</strong>
+                    <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=items.questionnaire_id) }}">{{items.unique_url}}</a></strong> 
+                    <br>times answered:<strong>{{items.answer_count}}</strong>
+                </li>
+                {%endfor%}
+            </ul>
+        {%endif%}
+    </form>
+    {%if check%}
+        <button type="submit" name="sortaftersearch">Sort Answers</button>
+    {%endif%}
     <ul>
         {% for items in q %}
             <li>
