@@ -119,3 +119,21 @@ v
                     <br>times answered:<strong>{{items.answer_count}}</strong>
                 </li>
                 {%endfor%}
+
+
+
+flash messages
+ {%with messages=get_flashed_messages()%}
+        {%if messages%}
+            {%for msg in messages%}
+                <p>{{msg}}</p>
+            {%endfor%}
+        {%endif%}
+    
+    {%endwith%}
+
+    <select name="type">
+                <option name=""></option>
+                <option name="openended">Open Ended</option>
+                <option name="numeric">Numeric</option>
+            </select>

@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
+    
  {%with messages=get_flashed_messages()%}
         {%if messages%}
             {%for msg in messages%}
@@ -8,10 +8,10 @@
         {%endif%}
     
     {%endwith%}
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>delete student</title>
+    <title>Create Questionnaire</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -44,6 +44,12 @@
             border: 1px solid #ccc;
             border-radius: 3px;
         }
+        .login-container select{
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
         .login-container button {
             padding: 0.5em;
             border: none;
@@ -58,37 +64,31 @@
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h2>delete a student</h2>
+       <div class="login-container">
+        <h2>Create questionnaire</h2>
         <form method="POST">
-            <label for="reg_number">Registry Number</label>
-            <input type="text" id="reg_number" name="reg_number" required>
-            <button type="submit" name="findstudent">find student</button>
+            <label for="title">Questionnaire title</label>
+            <input type="text" id="title" name="title" required>
+            <label for="desc">Questionnaire Description</label>
+            <input type="text" id="desc" name="desc" required>
+            <label for="nofqs">Number of questions</label>
+            <input type="number" name="nofqs" min="1" required>
+            <button type="submit" name="addquestions">Next step</button>
         </form>
-        
-        {% if check %}
-            {% if student %}
-                <h3>Student Found:</h3>
-                <p><strong>Registration Number:</strong> {{ student.reg_number }}</p>
-                <p><strong>Name:</strong> {{ student.name }}</p>
-                <p><strong>Surname:</strong> {{ student.surname }}</p>
-                <form method="POST">
-                    <input type="hidden" name="reg_number" value="{{ student.reg_number }}">
-                    <button type="submit" name="delete" 
-                            style="background-color: #ff4444; color: white;">
-                        Confirm Delete
-                    </button>
-                </form>
-            {% else %}
-                <p style="color: red;">No student found with this registration number.</p>
-            {% endif %}
-        {% endif %}
-    </div>
 
-    {% if error %}
-    <script>
-        alert("{{ error }}");
-    </script>
-    {% endif %}
+        {%if check%}
+            <form method="POST">
+                {%for i in range(nofqs)%}
+                    <label for="question{{i}}">Question Number {{i+1}}</label>
+                    <input type="text" name="question{{i}}" required>
+                     <select name="type">
+                        <option name="openended">Open Ended</option>
+                        <option name="numeric">Numeric</option>
+                    </select>
+                    
+                {%endfor%}
+                <button type="sumbit" name="create">Create Questionnaire</button>
+            </form>
+        {%endif%}
 </body>
 </html>

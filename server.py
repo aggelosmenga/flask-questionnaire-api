@@ -16,8 +16,13 @@ questionnaires=db["questionnaires"]
 def home():
     if 'username' in session:
         username = session['username']
+        return render_template('admin.html', username=username)
+    elif 'user' in session:
+        username=session['user']
         return render_template('home.html', username=username)
-    
+    elif 'student' in session:
+        username=session['student']
+        return render_template('student.html', username=username)
     # Redirect to login if not logged in
     return redirect(url_for('login'))
 
@@ -37,8 +42,10 @@ def login():
         else:
             error = 'Invalid Credentials'
         if user:
+            session['user']=username
             return render_template('home.html',error=error)
         elif student:
+            session['student']=username
             return render_template('student.html',error=error)
     return render_template('login.html', error=error)
 
@@ -64,6 +71,7 @@ def register():
         else:
             flash('All fields are required!', 'danger')
     return render_template('register.html')
+
 @app.route('/changepassword',methods=['GET','POST'])
 def changepassword():
     student=None
@@ -75,10 +83,52 @@ def changepassword():
         if 'changepass' in request.form:
             student=students_collection.find_one(jsoned)
             if student:
-                updated=students_collection.find_one_and_update(jsoned,{'$set':{'password':newpass}})
+                students_collection.find_one_and_update(jsoned,{'$set':{'password':newpass}})
                 flash('Password updated successfully!', 'info')
                 return redirect(url_for('home'))
     return render_template('changepassword.html',student=student)
+
+@app.route('/myquestionnaires',methods=['GET','POST'])
+def myquestionnaires():
+    if 'student' in session:
+        username=session['student']
+        stud=students_collection.find_one({'username':username})
+        myq=list(questionnaires.find({'student_id':int(stud.get('reg_number'))}))
+        return render_template('myquestionnaires.html',myq=myq)
+    return render_template('myquestionnaires.html')
+
+@app.route('/changeqname',methods=['GET','POST'])
+def changeqname():
+    username=session['student']
+    stud=students_collection.find_one({'username':username})
+    rnumber=stud.get('reg_number')
+    if request.method=='POST':
+        qid=request.form['questionnaire_id']
+        if 'findq' in request.form:
+            qforchange=questionnaires.find_one({'questionnaire_id':int(qid),'student_id':int(rnumber)})
+            return render_template('changeqname.html',qforchange=qforchange)
+        if 'setnewname' in request.form:
+            newname=request.form['newname']
+            questionnaires.find_one_and_update({'questionnaire_id':int(qid),'student_id':int(rnumber)},{'$set':{'title':newname}})
+            flash('Questionnaire title updated successfully!', 'info')
+            return redirect(url_for('home'))
+    return render_template('changeqname.html')
+
+
+@app.route('/createq',methods=['GET','POST'])
+def createq():
+    check=False
+    if request.method=='POST':
+        title=request.form['title']
+        desc=request.form['desc']
+        print(title)
+        nofqs=int(request.form['nofqs'])
+        if 'addquestions' in request.form:
+            check=True
+            return render_template('createq.html',nofqs=nofqs,check=check)
+    return render_template('createq.html')
+
+
 #admin
 @app.route('/admin',methods=['GET','POST'])
 def admin():
@@ -88,30 +138,37 @@ def admin():
     
     # Redirect to login if not logged in
     return redirect(url_for('login'))
+
 @app.route('/admin/addstudent',methods=['GET','POST'])
 def addstudent():
-    if request.method=='POST':
-        username=request.form['username']
-        password=request.form['password']
-        name=request.form['name']
-        surname=request.form['surname']
-        reg_number=request.form['reg_number']
-        dept=request.form['dept']
-        reg_number=int(reg_number)
-        if name and surname and username and password and reg_number and dept:
-            student = {'username':username,'password':password ,'name': name, 'surname': surname,"reg_number":reg_number,"department":dept}
-            students_collection.insert_one(student)
-            flash('student added successfully!')
-            return redirect(url_for('admin'))
-        
-        else:
-            flash('All fields are required!', 'danger')
+    if 'username' in session:
+        if request.method=='POST':
+            username=request.form['username']
+            password=request.form['password']
+            name=request.form['name']
+            surname=request.form['surname']
+            reg_number=request.form['reg_number']
+            dept=request.form['dept']
+            reg_number=int(reg_number)
+            
+            if name and surname and username and password and reg_number and dept:
+                student = {'username':username,'password':password ,'name': name, 'surname': surname,"reg_number":reg_number,"department":dept}
+                students_collection.insert_one(student)
+                flash('student added successfully!')
+                return redirect(url_for('admin'))
+            
+            else:
+                flash('All fields are required!', 'danger')
+    else:
+        return redirect(url_for('login'))
     return render_template('addstudent.html')
+
 @app.route('/admin/deletestudent',methods=['GET','POST'])
 def deletestudent():
     check=False
     student=None
     success = request.args.get('success')
+    
     if request.method=='POST':
         reg_number = request.form['reg_number']
         if re.search(r'[a-zA-Z]', reg_number):
@@ -134,12 +191,16 @@ def deletestudent():
 def showquestionnaires():
     q=questionnaires.find({})
     check=False
+    
     if request.method=='POST':
+        
         if 'sortbyanswer' in request.form:
             sorted=questionnaires.find().sort("answer_count",1)
             return(render_template('showquestionnaires.html',q=sorted))
+       
         if 'showall' in request.form :
             q=questionnaires.find({})
+        
         if 'search' in request.form:
             uservalue=request.form['searchfield'].strip()
             check=True
@@ -160,6 +221,7 @@ def showquestionnaires():
                 print(studentids)                  
                 questionnaire=list(questionnaires.find({'student_id': {'$in':studentids}}))
                 return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check)
+        
         if 'bound' in request.form:
             lowerbound=request.form['lowerbound'].strip()
             upperbound=request.form['upperbound'].strip()
@@ -172,7 +234,6 @@ def showquestionnaires():
                 if lowerbound>upperbound:
                     return render_template('showquestionnaires.html',q=q)
                 rangeofq=list(questionnaires.find({'answer_count':{'$gte':lowerbound,'$lte':upperbound}}))
-                print(rangeofq)
                 return render_template('showquestionnaires.html',rangeofq=rangeofq,check=check)
             #fix sort
     return render_template('showquestionnaires.html',q=q)
@@ -180,9 +241,7 @@ def showquestionnaires():
  #unique link for every questionnaire
 @app.route('/questionnaire/<num>')
 def questionnairelink(num):
-    print(num)
     unique=questionnaires.find_one({"questionnaire_id": int(num)}) 
-    print(unique) 
     return render_template('unique_q.html',unique=unique)
 
 # Run the Flask App
