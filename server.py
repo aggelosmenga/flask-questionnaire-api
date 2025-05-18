@@ -118,16 +118,55 @@ def changeqname():
 @app.route('/createq',methods=['GET','POST'])
 def createq():
     check=False
-    if request.method=='POST':
-        title=request.form['title']
-        desc=request.form['desc']
-        print(title)
-        nofqs=int(request.form['nofqs'])
-        if 'addquestions' in request.form:
-            check=True
-            return render_template('createq.html',nofqs=nofqs,check=check)
+    lastq=list(questionnaires.find({}).sort({'questionnaire_id':-1}).limit(1))
+    nextid=(lastq[0]['questionnaire_id'])+1
+    if 'student' in session:
+        username=session['student']
+        stud=students_collection.find_one({'username':username})
+        reg=stud.get('reg_number')
+        if request.method=='POST':
+            if 'addquestions' in request.form:
+                title=request.form['title']
+                desc=request.form['desc']
+                nofqs=int(request.form['nofqs'])
+                check=True
+                return render_template('createq.html',title=title,desc=desc,nofqs=nofqs,check=check)
+            if 'create' in request.form:
+                title=request.form['title']
+                desc=request.form['desc']
+                nofqs=int(request.form['nofqs'])
+                questions=[]
+                for i in range(nofqs):
+                    questiondesc=request.form[f'question{i}']
+                    typeofq=request.form['type']
+                    finalized={'type':typeofq,'description':questiondesc,'question_num':i+1}
+                    questions.append(finalized)
+                json={'student_id':reg,'questionnaire_id':nextid,'title':title,'description':desc,'unique_url':f'localhost:5000/questionnaire/{nextid}','questions':questions,'answer_count':0}
+                questionnaires.insert_one(json)
+                return render_template('home.html')
     return render_template('createq.html')
-
+@app.route('/deleteq',methods=['GET','POST'])
+def deleteq():
+    check=False
+    if 'student' in session:
+        username=session['student']
+        stud=students_collection.find_one({'username':username})
+        reg=int(stud.get('reg_number'))
+        print(reg)
+        if request.method=='POST':
+            if 'findq' in request.form:
+                qid=int(request.form['qid'])
+                qfordel=questionnaires.find_one({'student_id':reg,'questionnaire_id':qid})
+                if qfordel:
+                    check=True
+                print(qfordel,check)
+                return render_template('deleteq.html',check=check,questionnaire=qfordel)
+            if 'delete' in request.form:
+                qid=int(request.form['questionnaire_id'])
+                questionnaires.find_one_and_delete({'student_id':reg,'questionnaire_id':qid})
+                flash('questionnaire deleted succesfully!')
+                return redirect(url_for('home'))
+    return render_template('deleteq.html')
 
 #admin
 @app.route('/admin',methods=['GET','POST'])

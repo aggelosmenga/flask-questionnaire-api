@@ -79,6 +79,9 @@
         {%if check%}
             <form method="POST">
                 {%for i in range(nofqs)%}
+                    <input type="hidden" name="title" value="{{title}}">
+                    <input type="hidden" name="desc" value="{{desc}}">
+                    <input type="hidden" name="nofqs" value="{{nofqs}}">
                     <label for="question{{i}}">Question Number {{i+1}}</label>
                     <input type="text" name="question{{i}}" required>
                      <select name="type">
