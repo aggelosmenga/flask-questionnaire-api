@@ -11,7 +11,7 @@ students_collection = db["students"]
 users_collection = db["users"]
 answered_questionnaires=db["answered_questionnaires"]
 questionnaires=db["questionnaires"]
-sortcollection=db["sortcollection"]
+
 @app.route('/')
 def home():
     if 'username' in session:
