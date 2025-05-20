@@ -11,7 +11,7 @@ students_collection = db["students"]
 users_collection = db["users"]
 answered_questionnaires=db["answered_questionnaires"]
 questionnaires=db["questionnaires"]
-
+sortcollection=db["sortcollection"]
 @app.route('/')
 def home():
     if 'username' in session:
@@ -276,14 +276,21 @@ def showquestionnaires():
                     return render_template('showquestionnaires.html',q=q)
                 rangeofq=list(questionnaires.find({'answer_count':{'$gte':lowerbound,'$lte':upperbound}}))
                 return render_template('showquestionnaires.html',questionnaire=rangeofq,check=check,length=len(rangeofq))
+        
         if 'sortaftersearch' in request.form:
             length=int(request.form['lengthofresults'])
-            items=[]
-            for i in range(length):
-                items.append(request.form['result'])
-            print(items)
+            
+            for i in range(length): 
+                qid=request.form.getlist('qid')
+
+            tmp=list(map(int,qid))
+            itemstosort=[]
+            for i in range(len(tmp)):
+                itemstosort.append(questionnaires.find_one({'questionnaire_id':tmp[i]}))
             #last one remaining pls fix
-            return render_template('showquestionnaires.html',items=items,check=check)
+            itemstosort.sort(key=lambda x: x['answer_count'])
+            return render_template('showquestionnaires.html',sorted=itemstosort,check=check)
+        
     return render_template('showquestionnaires.html',q=q)
  
  #unique link for every questionnaire 

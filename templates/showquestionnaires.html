@@ -57,21 +57,32 @@
                 <br>description:<strong>{{items.description }}</strong>
                 <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=items.questionnaire_id) }}">{{items.unique_url}}</a></strong> 
                 <br>times answered:<strong>{{items.answer_count}}</strong>
-                {% for value in items.questions%}
-                <br><strong>question number {{value.question_num}}</strong>
-                <br>type of question:<strong>{{value.type}}</strong>
-                <br>question:<strong>{{value.description}}</strong>
-                {%endfor%}
             </li>
         {% endfor %} 
     </ul>
     {%if check%}
         <form method="POST">
             <input type="hidden" value="{{length}}" name="lengthofresults">
-            {%for items in questionnaire%}
-            <input type="hidden" value="{{items}}" name="result">
-            {%endfor%}
+        {%for items in questionnaire%}
+            <input type="hidden" value="{{items.questionnaire_id}}" name="qid">
+        {%endfor%}
             <button type="submit" name="sortaftersearch">Sort Answers</button>
         </form>
+        
     {%endif%}
+    
+    {%if sorted%}
+            <ul>
+            {%for items in sorted%}
+                <li>
+                Student registration number:<strong>{{items.student_id}}</strong>
+                <br>questionnaire id:<strong>{{items.questionnaire_id }}</strong> 
+                <br>title:<strong>{{items.title}}</strong>
+                <br>description:<strong>{{items.description }}</strong>
+                <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=items.questionnaire_id) }}">{{items.unique_url}}</a></strong> 
+                <br>times answered:<strong>{{items.answer_count}}</strong>
+            </li>
+            {%endfor%}
+        </ul>
+        {%endif%}
 </html>
