@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 from pymongo import MongoClient
-import re
+import re,ast
 # Flask App Initialization
 app = Flask(__name__)
 app.secret_key = 'a_random_key'
@@ -118,7 +118,8 @@ def changeqname():
 @app.route('/createq',methods=['GET','POST'])
 def createq():
     check=False
-    lastq=list(questionnaires.find({}).sort({'questionnaire_id':-1}).limit(1))
+    #auto increment
+    lastq=list(questionnaires.find({}).sort({'questionnaire_id':-1}).limit(1)) 
     nextid=(lastq[0]['questionnaire_id'])+1
     if 'student' in session:
         username=session['student']
@@ -141,10 +142,11 @@ def createq():
                     typeofq=request.form['type']
                     finalized={'type':typeofq,'description':questiondesc,'question_num':i+1}
                     questions.append(finalized)
-                json={'student_id':reg,'questionnaire_id':nextid,'title':title,'description':desc,'unique_url':f'localhost:5000/questionnaire/{nextid}','questions':questions,'answer_count':0}
-                questionnaires.insert_one(json)
+                jsoned={'student_id':reg,'questionnaire_id':nextid,'title':title,'description':desc,'unique_url':f'localhost:5000/questionnaire/{nextid}','questions':questions,'answer_count':0}
+                questionnaires.insert_one(jsoned)
                 return render_template('home.html')
     return render_template('createq.html')
+
 @app.route('/deleteq',methods=['GET','POST'])
 def deleteq():
     check=False
@@ -168,7 +170,7 @@ def deleteq():
                 return redirect(url_for('home'))
     return render_template('deleteq.html')
 
-#admin
+#admin exclusive
 @app.route('/admin',methods=['GET','POST'])
 def admin():
     if 'username' in session:
@@ -248,18 +250,18 @@ def showquestionnaires():
                 search_by_name=list(students_collection.find({'name':uservalue}))
                 studentids=[student['reg_number'] for student in search_by_name]
                 questionnaire=list(questionnaires.find({'student_id':{'$in':studentids}}))
-                return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check)
+                return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check,length=len(questionnaire))
             
             elif questionnaires.find_one({'title':uservalue}):
                 search_by_title=list(questionnaires.find({'title':uservalue}))
-                return render_template('showquestionnaires.html',questionnaire=search_by_title,check=check)
+                return render_template('showquestionnaires.html',questionnaire=search_by_title,check=check,length=len(search_by_title))
             
             elif students_collection.find_one({'department':uservalue}):
                 search_by_dept=list(students_collection.find({'department':uservalue}))
                 studentids=[student['reg_number'] for student in search_by_dept]
                 print(studentids)                  
                 questionnaire=list(questionnaires.find({'student_id': {'$in':studentids}}))
-                return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check)
+                return render_template('showquestionnaires.html',questionnaire=questionnaire,check=check,length=len(questionnaire))
         
         if 'bound' in request.form:
             lowerbound=request.form['lowerbound'].strip()
@@ -273,15 +275,48 @@ def showquestionnaires():
                 if lowerbound>upperbound:
                     return render_template('showquestionnaires.html',q=q)
                 rangeofq=list(questionnaires.find({'answer_count':{'$gte':lowerbound,'$lte':upperbound}}))
-                return render_template('showquestionnaires.html',rangeofq=rangeofq,check=check)
-            #fix sort
+                return render_template('showquestionnaires.html',questionnaire=rangeofq,check=check,length=len(rangeofq))
+        if 'sortaftersearch' in request.form:
+            length=int(request.form['lengthofresults'])
+            items=[]
+            for i in range(length):
+                items.append(request.form['result'])
+            print(items)
+            #last one remaining pls fix
+            return render_template('showquestionnaires.html',items=items,check=check)
     return render_template('showquestionnaires.html',q=q)
  
- #unique link for every questionnaire
-@app.route('/questionnaire/<num>')
+ #unique link for every questionnaire 
+ #questionnaire list and answer functions
+@app.route('/questionnaire/<num>',methods=['GET','POST'])
 def questionnairelink(num):
     unique=questionnaires.find_one({"questionnaire_id": int(num)}) 
     return render_template('unique_q.html',unique=unique)
+
+@app.route('/questionnaire/<num>/answer',methods=['GET','POST'])
+def answerquestionnaire(num):
+    fromstudent=False
+    if 'student' in session:
+        fromstudent=True
+    questionnaire=questionnaires.find_one({'questionnaire_id':int(num)})
+    questions=questionnaire['questions']
+    if request.method=='POST':
+        useranswers=[]
+        if 'answers' in request.form:
+            for i in range(1,len(questionnaire['questions'])+1):
+                qn=questions[i-1]['question_num']
+                print(qn)
+                answer=request.form[f'question{i}']
+                if re.fullmatch(r'^\d+$', answer):
+                    jsoned={'question_num':qn,'content':int(answer)}
+                else:
+                    jsoned={'question_num':qn,'content':answer}
+                useranswers.append(jsoned)
+        send={'questionnaire_id':int(num),'from_student':fromstudent,'answers':useranswers}
+        answered_questionnaires.insert_one(send)
+        return render_template('home.html')
+    return render_template('answerq.html',questionnaire=questionnaire,questions=questions)
+
 
 # Run the Flask App
 if __name__ == '__main__':

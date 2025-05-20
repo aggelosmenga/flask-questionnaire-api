@@ -137,3 +137,18 @@ flash messages
                 <option name="openended">Open Ended</option>
                 <option name="numeric">Numeric</option>
             </select>
+
+
+
+
+
+
+            <form method="POST">
+            <input type="hidden" value="{{length}}" name="lengthofresults">
+            {%set i=1%}
+                {%for items in questionnaire%}
+                    <input type="hidden" value="{{items}}" name="result{{i}}">
+                {%set i=i+1%}
+            {%endfor%}
+            <button type="submit" name="sortaftersearch">Sort Answers</button>
+        </form>

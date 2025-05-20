@@ -32,7 +32,7 @@
         Search by a range of the number of responses received<Br>
         from: <input type="text" name="lowerbound"> to: <input type="text" name="upperbound">
         <button type="submit" name="bound">Search</button>
-        {%if rangeofq is not none%}
+        {%if questionnaire is not none%}
             <ul>
                 {%for items in rangeofq%}
                 <li>
@@ -47,9 +47,7 @@
             </ul>
         {%endif%}
     </form>
-    {%if check%}
-        <button type="submit" name="sortaftersearch">Sort Answers</button>
-    {%endif%}
+    
     <ul>
         {% for items in q %}
             <li>
@@ -67,4 +65,13 @@
             </li>
         {% endfor %} 
     </ul>
+    {%if check%}
+        <form method="POST">
+            <input type="hidden" value="{{length}}" name="lengthofresults">
+            {%for items in questionnaire%}
+            <input type="hidden" value="{{items}}" name="result">
+            {%endfor%}
+            <button type="submit" name="sortaftersearch">Sort Answers</button>
+        </form>
+    {%endif%}
 </html>
