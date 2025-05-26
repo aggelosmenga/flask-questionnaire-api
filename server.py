@@ -53,6 +53,8 @@ def login():
 def logout():
     # Remove the username from the session if it's there
     session.pop('username', None)
+    session.pop('user', None)
+    session.pop('student', None)
     return redirect(url_for('login'))
 
 @app.route('/register',methods=['GET','POST'])
@@ -95,23 +97,60 @@ def myquestionnaires():
         stud=students_collection.find_one({'username':username})
         myq=list(questionnaires.find({'student_id':int(stud.get('reg_number'))}))
         return render_template('myquestionnaires.html',myq=myq)
+    elif 'username' in session:
+        myq=list(questionnaires.find({'student_id':'admin'}))
+        return render_template('myquestionnaires.html',myq=myq)
     return render_template('myquestionnaires.html')
+@app.route('/qstats',methods=['GET','POST'])
+def qstats():
+    if 'student' in session:
+        username=session['student']
+        stud=students_collection.find_one({'username':username})
+        rnumber=stud.get('reg_number')
+        if request.method=='POST':
+            qid=int(request.form['questionnaire_id'])
+            if questionnaires.find_one({'questionnaire_id':qid}):
+                return redirect(url_for('answers', studentid=rnumber, qid=qid))
+            else:
+                return "Questionnaire not found!", 404
+    return render_template('qstats.html')
+                    
+        
+@app.route('/qstats/<studentid>/<qid>',methods=['GET','POST'])
+def answers(studentid,qid):
+    totalans=list(answered_questionnaires.find({}))
+    ansbystudents=list(answered_questionnaires.find({'from_student':'true','questionnaire_id':qid}))
+    ansbyusers=list(answered_questionnaires.find({'from_student':'false','questionnaire_id':qid}))
+    #final one 
+    return render_template('answers.html')
 
 @app.route('/changeqname',methods=['GET','POST'])
 def changeqname():
-    username=session['student']
-    stud=students_collection.find_one({'username':username})
-    rnumber=stud.get('reg_number')
-    if request.method=='POST':
-        qid=request.form['questionnaire_id']
-        if 'findq' in request.form:
-            qforchange=questionnaires.find_one({'questionnaire_id':int(qid),'student_id':int(rnumber)})
-            return render_template('changeqname.html',qforchange=qforchange)
-        if 'setnewname' in request.form:
-            newname=request.form['newname']
-            questionnaires.find_one_and_update({'questionnaire_id':int(qid),'student_id':int(rnumber)},{'$set':{'title':newname}})
-            flash('Questionnaire title updated successfully!', 'info')
-            return redirect(url_for('home'))
+    if 'student' in session:
+        username=session['student']
+        stud=students_collection.find_one({'username':username})
+        rnumber=stud.get('reg_number')
+        if request.method=='POST':
+            qid=request.form['questionnaire_id']
+            if 'findq' in request.form:
+                qforchange=questionnaires.find_one({'questionnaire_id':int(qid),'student_id':int(rnumber)})
+                return render_template('changeqname.html',qforchange=qforchange)
+            if 'setnewname' in request.form:
+                newname=request.form['newname']
+                questionnaires.find_one_and_update({'questionnaire_id':int(qid),'student_id':int(rnumber)},{'$set':{'title':newname}})
+                flash('Questionnaire title updated successfully!', 'info')
+                return redirect(url_for('home'))
+    elif 'username' in session:
+        if request.method=='POST':
+            qid=request.form['questionnaire_id']
+            if 'findq' in request.form:
+                qforchange=questionnaires.find_one({'questionnaire_id':int(qid)})
+                return render_template('changeqname.html',qforchange=qforchange)
+            if 'setnewname' in request.form:
+                newname=request.form['newname']
+                questionnaires.find_one_and_update({'questionnaire_id':int(qid)},{'$set':{'title':newname}})
+                flash('Questionnaire title updated successfully!', 'info')
+                return redirect(url_for('home'))
     return render_template('changeqname.html')
 
 
@@ -144,7 +183,28 @@ def createq():
                     questions.append(finalized)
                 jsoned={'student_id':reg,'questionnaire_id':nextid,'title':title,'description':desc,'unique_url':f'localhost:5000/questionnaire/{nextid}','questions':questions,'answer_count':0}
                 questionnaires.insert_one(jsoned)
-                return render_template('home.html')
+                return redirect(url_for('home'))
+    elif 'username' in session:
+        if request.method=='POST':
+            if 'addquestions' in request.form:
+                title=request.form['title']
+                desc=request.form['desc']
+                nofqs=int(request.form['nofqs'])
+                check=True
+                return render_template('createq.html',title=title,desc=desc,nofqs=nofqs,check=check)
+            if 'create' in request.form:
+                title=request.form['title']
+                desc=request.form['desc']
+                nofqs=int(request.form['nofqs'])
+                questions=[]
+                for i in range(nofqs):
+                    questiondesc=request.form[f'question{i}']
+                    typeofq=request.form['type']
+                    finalized={'type':typeofq,'description':questiondesc,'question_num':i+1}
+                    questions.append(finalized)
+                jsoned={'student_id':'admin','questionnaire_id':nextid,'title':title,'description':desc,'unique_url':f'localhost:5000/questionnaire/{nextid}','questions':questions,'answer_count':0}
+                questionnaires.insert_one(jsoned)
+                return redirect(url_for('home'))
     return render_template('createq.html')
 
 @app.route('/deleteq',methods=['GET','POST'])
@@ -166,6 +226,19 @@ def deleteq():
             if 'delete' in request.form:
                 qid=int(request.form['questionnaire_id'])
                 questionnaires.find_one_and_delete({'student_id':reg,'questionnaire_id':qid})
+                flash('questionnaire deleted succesfully!')
+                return redirect(url_for('home'))
+    elif 'username' in session:
+        if request.method=='POST':
+            if 'findq' in request.form:
+                qid=int(request.form['qid'])
+                qfordel=questionnaires.find_one({'questionnaire_id':qid})
+                if qfordel:
+                    check=True
+                return render_template('deleteq.html',check=check,questionnaire=qfordel)
+            if 'delete' in request.form:
+                qid=int(request.form['questionnaire_id'])
+                questionnaires.find_one_and_delete({'questionnaire_id':qid})
                 flash('questionnaire deleted succesfully!')
                 return redirect(url_for('home'))
     return render_template('deleteq.html')

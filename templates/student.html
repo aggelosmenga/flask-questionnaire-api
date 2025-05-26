@@ -33,10 +33,11 @@
         <button> <a href="{{url_for('changepassword')}}">Change Password</a></button>
         <br>
         <button><a href="{{url_for('myquestionnaires')}}">my questionnnaires</a></button>
+        <button><a href="{{url_for('qstats')}}">my questionnaire statistics</a></button>
         <button><a href="{{url_for('changeqname')}}">Change name of questionnaire</a></button>
-        <button> <a href="{{ url_for('showquestionnaires')}}">Show Available questionnnaires</a></button>
         <button> <a href="{{ url_for('createq')}}">Create New questionnaire</a></button>
-        <button> <a href="{{ url_for('deleteq')}}">Delete questionnaire</a></button>
+        <button> <a href="{{ url_for('deleteq')}}">Delete questionnaire</a></button><br>
+        <button> <a href="{{ url_for('showquestionnaires')}}">Show Available questionnnaires</a></button>
         <button> <a href="{{ url_for('logout') }}">Logout</a></button>
         </div>
     </body>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    {%with messages=get_flashed_messages()%}
+   {%with messages=get_flashed_messages()%}
         {%if messages%}
             {%for msg in messages%}
                 <p>{{msg}}</p>
@@ -8,9 +8,26 @@
         {%endif%}
     
     {%endwith%}
+    <style>
+        html{
+            text-align: center;
+        }
+        div{
+            margin: 20px;
+        }
+        button{
+            margin: 10px;
+        }
+        a:link, 
+        a:visited, 
+        a:hover, 
+        a:active {
+            text-decoration: none;
+        }
+    </style>
     <head>
-        <h2>Main Page</h2>
+        <h2>User Page</h2>
     </head>
-    lololol<br>
+    <button> <a href="{{ url_for('showquestionnaires')}}">Show Available questionnnaires</a></button>
     <button> <a href="{{ url_for('logout') }}">Logout</a></button>
 </html>
