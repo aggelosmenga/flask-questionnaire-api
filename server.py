@@ -116,13 +116,15 @@ def qstats():
     return render_template('qstats.html')
                     
         
-@app.route('/qstats/<studentid>/<qid>',methods=['GET','POST'])
+@app.route('/qstats/studentid_<studentid>/q_id_<qid>',methods=['GET','POST'])
 def answers(studentid,qid):
-    totalans=list(answered_questionnaires.find({}))
-    ansbystudents=list(answered_questionnaires.find({'from_student':'true','questionnaire_id':qid}))
-    ansbyusers=list(answered_questionnaires.find({'from_student':'false','questionnaire_id':qid}))
+    totalans=list(answered_questionnaires.find({'questionnaire_id':int(qid)}))
+    ansbystudents=list(answered_questionnaires.find({'from_student':True,'questionnaire_id':int(qid)}))
+    ansbyusers=list(answered_questionnaires.find({'from_student':False,'questionnaire_id':int(qid)}))
     #final one 
-    return render_template('answers.html')
+    studpercentage=round((len(ansbystudents)/len(totalans))*100,2)
+    userpercentage=round((len(ansbyusers)/len(totalans))*100,2)
+    return render_template('answers.html',studpercentage=studpercentage,userpercentage=userpercentage,totalans=totalans,nstudents=len(ansbystudents),nusers=len(ansbyusers))
 
 @app.route('/changeqname',methods=['GET','POST'])
 def changeqname():
@@ -226,6 +228,7 @@ def deleteq():
             if 'delete' in request.form:
                 qid=int(request.form['questionnaire_id'])
                 questionnaires.find_one_and_delete({'student_id':reg,'questionnaire_id':qid})
+                answered_questionnaires.find_one_and_delete({'questionnaire_id':qid})
                 flash('questionnaire deleted succesfully!')
                 return redirect(url_for('home'))
     elif 'username' in session:
@@ -239,6 +242,7 @@ def deleteq():
             if 'delete' in request.form:
                 qid=int(request.form['questionnaire_id'])
                 questionnaires.find_one_and_delete({'questionnaire_id':qid})
+                answered_questionnaires.find_one_and_delete({'questionnaire_id':qid})
                 flash('questionnaire deleted succesfully!')
                 return redirect(url_for('home'))
     return render_template('deleteq.html')

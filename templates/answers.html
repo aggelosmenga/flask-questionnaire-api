@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h2>Answers of Questionnaire and statistics</h2>
+    </head>
+    <body>
+        <div>
+            <h3>statistics</h3>
+            <div>
+                <p><strong>Answers by students:</strong>{{nstudents}}</p>
+                <p><strong>Student percentage</strong>{{studpercentage}}%</p>
+            </div>
+            <div>
+                <p><strong>Answers by users:</strong>{{nusers}}</p>
+                <p><strong>User percentage:</strong>{{userpercentage}}%</p>
+            </div>
+        </div>
+        <div>
+            <h3>Answers</h3>
+            <div>
+                {%for items in totalans%}
+                    {%for answers in items.answers%}
+                        <p><strong>Answer to question {{answers.question_num}}: </strong>{{answers.content}}</p>
+                    {%endfor%}
+                {%endfor%}
+            </div>
+        </div>
+    </body>
+</html>
