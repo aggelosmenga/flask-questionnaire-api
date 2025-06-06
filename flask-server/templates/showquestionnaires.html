@@ -1,0 +1,88 @@
+<html>
+    <form method="POST">
+        <button type="submit" name="sortbyanswer">Sort by times answered</button>
+        <button type="submit" name="showall">Show all questionnaires</button>
+    </form>
+    <form method="POST">
+        <input type="text" name="searchfield">
+        <button type="submit" name="search">Search Questionnaires</button>
+        useful info: you can search by: student name, questionnaire title,departement of student created
+        <div>
+        {%if check%}
+            <ul>
+            {%if questionnaire is not none%}
+                {%for items in questionnaire%}
+                <li>
+                    Student registration number:<strong>{{items.student_id}}</strong>
+                    <br>questionnaire id:<strong>{{items.questionnaire_id }}</strong> 
+                    <br>title:<strong>{{items.title}}</strong>
+                    <br>description:<strong>{{items.description }}</strong>
+                    <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=items.questionnaire_id) }}">{{items.unique_url}}</a></strong> 
+                    <br>times answered:<strong>{{items.answer_count}}</strong>
+                </li>
+                {%endfor%}
+            {%else%}
+                <h2 style="color:red">No questionnaire found</h2>
+            {%endif%}
+            </ul>
+        {%endif%}
+        </div>
+    </form>
+    <form method="POST">
+        Search by a range of the number of responses received<Br>
+        from: <input type="text" name="lowerbound"> to: <input type="text" name="upperbound">
+        <button type="submit" name="bound">Search</button>
+        {%if questionnaire is not none%}
+            <ul>
+                {%for items in rangeofq%}
+                <li>
+                    Student registration number:<strong>{{items.student_id}}</strong>
+                    <br>questionnaire id:<strong>{{items.questionnaire_id }}</strong> 
+                    <br>title:<strong>{{items.title}}</strong>
+                    <br>description:<strong>{{items.description }}</strong>
+                    <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=items.questionnaire_id) }}">{{items.unique_url}}</a></strong> 
+                    <br>times answered:<strong>{{items.answer_count}}</strong>
+                </li>
+                {%endfor%}
+            </ul>
+        {%endif%}
+    </form>
+    
+    <ul>
+        {% for items in q %}
+            <li>
+                Student registration number:<strong>{{items.student_id}}</strong>
+                <br>questionnaire id:<strong>{{items.questionnaire_id }}</strong> 
+                <br>title:<strong>{{items.title}}</strong>
+                <br>description:<strong>{{items.description }}</strong>
+                <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=items.questionnaire_id) }}">{{items.unique_url}}</a></strong> 
+                <br>times answered:<strong>{{items.answer_count}}</strong>
+            </li>
+        {% endfor %} 
+    </ul>
+    {%if check%}
+        <form method="POST">
+            <input type="hidden" value="{{length}}" name="lengthofresults">
+        {%for items in questionnaire%}
+            <input type="hidden" value="{{items.questionnaire_id}}" name="qid">
+        {%endfor%}
+            <button type="submit" name="sortaftersearch">Sort Answers</button>
+        </form>
+        
+    {%endif%}
+    
+    {%if sorted%}
+            <ul>
+            {%for items in sorted%}
+                <li>
+                Student registration number:<strong>{{items.student_id}}</strong>
+                <br>questionnaire id:<strong>{{items.questionnaire_id }}</strong> 
+                <br>title:<strong>{{items.title}}</strong>
+                <br>description:<strong>{{items.description }}</strong>
+                <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=items.questionnaire_id) }}">{{items.unique_url}}</a></strong> 
+                <br>times answered:<strong>{{items.answer_count}}</strong>
+            </li>
+            {%endfor%}
+        </ul>
+        {%endif%}
+</html>

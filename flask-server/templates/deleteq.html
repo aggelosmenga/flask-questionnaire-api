@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+ {%with messages=get_flashed_messages()%}
+        {%if messages%}
+            {%for msg in messages%}
+                <p>{{msg}}</p>
+            {%endfor%}
+        {%endif%}
+    
+    {%endwith%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete questionnaire</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 2em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            margin-bottom: 1em;
+        }
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .login-container label {
+            margin-bottom: 0.5em;
+        }
+        .login-container input {
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login-container button {
+            padding: 0.5em;
+            border: none;
+            border-radius: 3px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form method="POST">
+            <label for="qid">Questionnaire ID</label>
+            <input type="text" name="qid">
+            <button type="submit" name="findq">Find Questionnaire</button>
+        </form>
+        {% if check %}
+            {% if questionnaire %}
+                <h3>Questionnaire Found:</h3>
+                <p><strong>Title:</strong> {{ questionnaire.title }}</p>
+                <form method="POST">
+                    <input type="hidden" name="questionnaire_id" value="{{ questionnaire.questionnaire_id }}">
+                    <button type="submit" name="delete" 
+                            style="background-color: #ff4444; color: white;">
+                        Confirm Delete
+                    </button>
+                </form>
+            {% else %}
+                <p style="color: red;">No Questionnaire found with this ID.</p>
+            {% endif %}
+        {% endif %}
+    </div>
+</body>

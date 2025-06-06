@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <h2>my questionnnaires</h2>
+    </head>
+    <body>
+        <ul>
+            {%if myq%}
+                {%for items in myq%}
+                    <li>
+                     questionnaire id:<strong>{{items.questionnaire_id }}</strong> 
+                    <br>title:<strong>{{items.title}}</strong>
+                    <br>description:<strong>{{items.description }}</strong>
+                    <br>unique url:<strong><a href="{{ url_for('questionnairelink', num=items.questionnaire_id) }}">{{items.unique_url}}</a></strong> 
+                    <br>times answered:<strong>{{items.answer_count}}</strong>
+                    </li>
+                {%endfor%}
+            {%endif%}
+        </ul>
+    </body>
+</html>

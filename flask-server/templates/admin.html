@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        html{
+            text-align: center;
+        }
+        div{
+            margin: 20px;
+        }
+        button{
+            margin: 10px;
+        }
+        a:link, 
+        a:visited, 
+        a:hover, 
+        a:active {
+            text-decoration: none;
+        }
+    </style>
+    <head>
+        <h2>admin Page</h2>
+        {%with messages=get_flashed_messages()%}
+        {%if messages%}
+            {%for msg in messages%}
+                <p>{{msg}}</p>
+            {%endfor%}
+        {%endif%}
+    
+    {%endwith%}
+    </head>
+    <body>
+        <div>
+            <button> <a href="{{ url_for('addstudent') }}">Add student</a></button>
+            <br>
+            <button> <a href="{{ url_for('deletestudent')}}"> delete student</a></button>
+            <button> <a href="{{url_for('changepassword')}}">Change Student Password</a></button>
+            <br>
+            <button> <a href="{{ url_for('showquestionnaires')}}">Show Available questionnnaires</a></button>
+            <div>
+            <button><a href="{{url_for('myquestionnaires')}}">my questionnnaires</a></button>
+            <button><a href="{{url_for('changeqname')}}">Change name of questionnaire</a></button>
+            <button> <a href="{{ url_for('createq')}}">Create New questionnaire</a></button>
+            <button> <a href="{{ url_for('deleteq')}}">Delete questionnaire</a></button>
+            </div>
+            <div>
+            <button> <a href="{{ url_for('logout') }}">Logout</a></button>
+        </div>
+    </body>
+</html>
