@@ -37,8 +37,8 @@
 Ονομα βασης:UniQ
 
 ## ΤΡΟΠΟΣ ΕΚΤΕΛΕΣΗΣ ΣΥΣΤΗΜΑΤΟΣ
-# Ως χρηστες
-* Ανοιγουμε command prompt οπου εχουμε κατεβασει το docker engine και εκτελουμε μεσω του command prompt την εντολη docker compose up -d --build στο σημειο οπου βρισκεται το Compose.yaml αρχειο##
-# Ως Developers
-![image](https://github.com/user-attachments/assets/198e9ff6-a8c2-4039-b554-6b1f45cbee01)
-Ελεγχουμε τη βαση δεδομενων για τα username και password Που εισαχθηκαν και βλεπουμε αν 
+* Ανοιγουμε command prompt οπου εχουμε κατεβασει το docker engine και εκτελουμε μεσω του command prompt την εντολη docker compose up -d --build στο σημειο οπου βρισκεται το Compose.yaml αρχειο
+* με την υλοποιηση του compose, εχει ανοιξει localhost server στη πορτα 5000
+* μπαινουμε στο http://localhost:5000/ στο browser της επιλογης μας και το πληροφοριακο συστημα θα πρεπει να τρεχει, και να μας εχει στο Login page
+* Μπαινουμε ειτε ως χρηστες ειτε ως φοιτητες η ως admin με τα απαραιτητα αντιστοιχα credentials
+ 
