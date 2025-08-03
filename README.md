@@ -8,7 +8,7 @@
 * Αναφορες
 
 ## ΤΕΧΝΟΛΟΓΙΕΣ ΠΟΥ ΧΡΗΣΙΜΟΠΟΙΗΘΗΚΑΝ
-Για την υλοποιηση και τον ελεγχο του συστηματος χρησιμοποιηθηκε η Python version 3.13, το IDE Visual Studio Code,το Docker Desktop για τα windows και το Mongodb Compass για τον ελεγχο των δεδομενων.
+Για την υλοποιηση και τον ελεγχο του συστηματος χρησιμοποιηθηκε η Python version 3.13,το Docker Desktop για τα windows και το Mongodb Compass για τον ελεγχο των δεδομενων.
 
 ## ΠΕΡΙΓΡΑΦΗ ΤΩΝ ΑΡΧΕΙΩΝ
 * Server.py
